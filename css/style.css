@@ -1,1 +1,110 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    scroll-behavior: smooth;
+}
 
+h1, h2 { font-weight: 700; }
+section { padding: 50px 20px; }
+
+/* HERO */
+#hero {
+    background: linear-gradient(to right, #111, #333);
+    text-align: center;
+    padding: 80px 20px;
+}
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    animation: profile-spin 6s linear infinite;
+}
+@keyframes profile-spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.name { font-size: 2em; margin: 10px 0; color: #ffcc00; }
+.position { font-size: 1.2em; color: #fff; }
+.contact span { margin: 0 10px; }
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #555;
+    transition: all 0.3s ease;
+}
+tr:hover {
+    background: #222;
+    color: #ffcc00;
+}
+
+/* SKILLS */
+.skill { margin: 15px 0; }
+.progress {
+    background: #222;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ffcc00, #ff6600);
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 20px;
+    transition: width 2s;
+}
+
+/* TIMELINE */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+.timeline li {
+    padding: 10px 0;
+    border-left: 3px solid #ffcc00;
+    margin-left: 20px;
+    position: relative;
+}
+.timeline li::before {
+    content: "⚽️";
+    position: absolute;
+    left: -22px;
+}
+
+/* MEDIA */
+.media-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.media-grid img, .media-grid video {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.media-grid img:hover, .media-grid video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffcc00;
+}
+
+/* FOOTER */
+footer { background: #111; text-align: center; padding: 40px 20px; }
+.footer-profile {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ffcc00;
+    margin-bottom: 10px;
+}
